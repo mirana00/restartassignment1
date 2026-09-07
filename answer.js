@@ -29,10 +29,23 @@ function getDayType(day) {
     }
 }
 
-console.log(getDayType("Friday"));
 
-console.log(getDayType("friday"));
+// Question 3: Username Gatekeeper
 
-console.log(getDayType("MONDAY"));
+function validateUsername(username){
+    if(username.length< 4) {
+        return "Too Short";
+    }
 
-console.log(getDayType("Bandarban"));
+    if(username.includes(" ")){
+        return "No Space Allowed";
+    }
+
+    if(username.toLowerCase().includes("admin")){
+        return "Reserved Word";
+    }
+
+    return "Available";
+}
+
+
